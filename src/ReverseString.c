@@ -1,5 +1,6 @@
 #include "ReverseString.h"
 #include <stdio.h>
+#include <stdlib.h>
 
 int getStringLength(char *str){
   int i = 0;
@@ -13,25 +14,18 @@ int getStringLength(char *str){
 
 char *ReverseString(char *str){
   int length = 0;
-  int end =0;
-  end = length;
-  char *begin,*end, temp;
+  char *rvs ;
+  rvs = (char *)malloc(length + 1);
 
   length = getStringLength(str);
+  //printf("length = %d",length);
 
-  for (int i = 0; i < length - 1; i++){
-    temp = *str;
+  int len = length;
+  for(int i = 0; i<length ; i++){
+    rvs[i] = str[(len-1)];
+    len--;
   }
-
-
-for (i = 0; i < length/2; i++)
-{
-   temp   = *end;
-   *end   = *begin;
-   *begin = temp;
-
-   begin++;
-   end--;
-}
-
+  //printf("test = %s",rvs);
+  rvs[length ] = '\0';
+  return rvs;
 }
