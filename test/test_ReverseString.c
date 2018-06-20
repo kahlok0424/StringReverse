@@ -14,12 +14,12 @@ void test_ReverseString_given_null_expect_0(void)
   char c;
   char *ptr;
   char **ptrptr;
-    TEST_ASSERT_EQUAL(0, getStringLength("0"));
+  TEST_ASSERT_EQUAL(0, getStringLength("NULL"));
 }
 
 void test_ReverseString_given_empty_expect_0(void)
 {
-  TEST_ASSERT_EQUAL(0,getStringLength(" "));
+  TEST_ASSERT_EQUAL(0,getStringLength(""));
 }
 
 void test_ReverseString_given_f_expect_1(void)

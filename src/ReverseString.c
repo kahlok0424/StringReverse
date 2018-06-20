@@ -4,14 +4,34 @@
 int getStringLength(char *str){
   int i = 0;
 
-  while( *str != '\0'){
+  while( *(str + i) != '\0'){
     i++;
-    str++;
+    //str++;
   }
   return i;
 }
 
 char *ReverseString(char *str){
-  //test
-  //test 2
+  int length = 0;
+  int end =0;
+  end = length;
+  char *begin,*end, temp;
+
+  length = getStringLength(str);
+
+  for (int i = 0; i < length - 1; i++){
+    temp = *str;
+  }
+
+
+for (i = 0; i < length/2; i++)
+{
+   temp   = *end;
+   *end   = *begin;
+   *begin = temp;
+
+   begin++;
+   end--;
+}
+
 }
